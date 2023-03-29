@@ -1,0 +1,158 @@
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+  /*
+  =============== 
+  Variables
+  ===============
+  */
+  :root {
+    --primary-color:  white;
+    --secondary-color:   white;
+    ---tertiary-color: rgb(25, 25, 25);;
+  }
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    line-height: 1.5;
+    font-size: 0.875rem;
+    font-family: 'Playfair Display', serif;
+    background-color: var(--primary-color);
+  }
+  ul {
+    list-style-type: none;
+  }
+  /*
+  =============== 
+  Navbar
+  ===============
+  */
+  nav {
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .toggle {
+    font-size: 1.5rem;
+    color: var(--clr-primary-5);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  .toggle:hover {
+    color: var(--clr-primary-1);
+    transform: rotate(90deg);
+  }
+  .logo {
+    height: 40px;
+  }
+  .links a {
+    color: var(--clr-grey-3);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+  }
+  .links a:hover {
+    background: var(--clr-primary-8);
+    color: var(--clr-primary-5);
+    padding-left: 1.5rem;
+  }
+
+  .links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .show-links {
+    height: 10rem;
+ text-align: center;
+  }
+
+.nav-center {
+    color: var(---tertiary-color);
+}
+/* end of navbar */ 
+ 
+
+.desktop {
+    display: none;
+}
+.mobile {
+    display: none;
+}
+
+  @media screen and (min-width: 800px) {
+    .nav-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .toggle {
+      display: none;
+    }
+    .links {
+      height: auto;
+      display: flex;
+    }
+    .links a {
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+    .links a:hover {
+      padding: 0;
+      background: transparent;
+    }
+   .desktop {
+    display: block;
+   }
+  }
+
+@media only screen and (max-width: 800px) {
+ 
+  .nav-center {
+    padding: 3em;
+  }
+
+  .mobile {
+    display: block;
+
+  }
+
+  .desktop {
+    display: none;
+  }
+  
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
